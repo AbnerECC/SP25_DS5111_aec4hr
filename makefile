@@ -1,11 +1,11 @@
 default:
-    @cat makefile
+    @cat Makefile
 
 env:
-    python3 -m venv env; source env/bin/activate; pip install --upgrade pip
+    python3 -m venv env; . env/bin/activate; pip install --upgrade pip
 
 update: env
-    source env/bin/activate; pip install -r requirements.txt
+    . env/bin/activate && pip install -r requirements.txt
 
 ygainers.html:
     sudo google-chrome-stable --headless --disable-gpu --dump-dom --no-sandbox --timeout=5000 'https://finance.yahoo.com/markets/stocks/gainers/?start=0&count=200' > ygainers.html
