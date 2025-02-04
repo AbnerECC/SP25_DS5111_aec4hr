@@ -18,3 +18,16 @@ This repository is for applying automation techniques for data science.
 - The requirements.txt file includes the pandas libraries that are needed to run the code. These requirements will be executed within the makefile
 - Within the project use the "Make" command to run the Makefile
 - The make update command includes everything thast should be needed to run the project
+- An example of what the repo should look like after running this project setup is pasted below
+- SP25_DS5111_aec4hr
+├── LICENSE
+├── Makefile
+├── README.md
+├── google-chrome-stable_current_amd64.deb
+├── init.sh
+├── install_chrome_headless.sh
+├── requirements.txt
+├── wjsgainers.html
+└── ygainers.html
+
+1 directory, 9 files
