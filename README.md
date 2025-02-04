@@ -15,7 +15,6 @@ This repository is for applying automation techniques for data science.
 ## **Project Setup**
 
 - Within the project run the install_chrome_headless.sh script to install a chrome headles browser and check that the example works
+- The requirements.txt file includes the pandas libraries that are needed to run the code. These requirements will be executed within the makefile
 - Within the project use the "Make" command to run the Makefile
-- The requirements.txt file 
-
-
+- The make update command includes everything thast should be needed to run the project
