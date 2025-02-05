@@ -19,8 +19,9 @@ This repository is for applying automation techniques for data science.
 - Within the project use the "Make" command to view the Makefile
 - The make update command includes everything thast should be needed to update the environment
 - Use the "make ygainers.csv" command to parse the html file into a csv
+- In case there is an error remove the .html files before attempting to rerun the make ygainer.csv as it will error on an empty file
 - An example of what the repo should look like after running this project setup is pasted below
-- SP25_DS5111_aec4hr
+SP25_DS5111_aec4hr
 ├── LICENSE
 ├── Makefile
 ├── README.md
@@ -29,6 +30,8 @@ This repository is for applying automation techniques for data science.
 ├── install_chrome_headless.sh
 ├── requirements.txt
 ├── wjsgainers.html
-└── ygainers.html
+├── ygainers.csv
+├── ygainers.html
+└── ygainers.html~
 
 1 directory, 9 files
