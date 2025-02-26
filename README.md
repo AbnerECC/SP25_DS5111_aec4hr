@@ -31,3 +31,8 @@ This repository is for applying automation techniques for data science.
 └── ygainers.html
 
 1 directory, 9 files
+
+
+## Status
+
+![validations workflow](https://github.com/AbnerECC/SP25_DS5111/actions/workflows/validations.yml/badge.svg)
