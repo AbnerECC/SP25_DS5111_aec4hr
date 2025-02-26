@@ -169,3 +169,6 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Large file
+.google-chrome-stable_current_amd64.deb
