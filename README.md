@@ -31,3 +31,9 @@ This repository is for applying automation techniques for data science.
 └── ygainers.html
 
 1 directory, 9 files
+
+
+## Status
+
+![validations workflow](https://github.com/AbnerECC/SP25_DS5111_aec4hr/blob/LAB-03_csv_normalizer/.github/workflows/validations.yml/badge.svg)
+
