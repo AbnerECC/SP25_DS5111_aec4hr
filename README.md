@@ -35,5 +35,4 @@ This repository is for applying automation techniques for data science.
 
 ## Status
 
-![validations workflow](https://github.com/AbnerECC/SP25_DS5111_aec4hr/blob/LAB-03_csv_normalizer/.github/workflows/validations.yml/badge.svg)
-
+[![Feature Validation](https://github.com/AbnerECC/SP25_DS5111_aec4hr/actions/workflows/validations.yml/badge.svg?branch=LAB-03_csv_normalizer)](https://github.com/AbnerECC/SP25_DS5111_aec4hr/actions/workflows/validations.yml)
