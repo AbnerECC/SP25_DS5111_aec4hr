@@ -23,14 +23,17 @@ This repository is for applying automation techniques for data science.
 ├── LICENSE
 ├── Makefile
 ├── README.md
+├── bin
+│   ├── __pycache__
+│   └── normalize_csv.py
+├── env
+│   ├── bin
+│   ├── include
+│   ├── lib
+│   ├── lib64 -> lib
+│   └── pyvenv.cfg
 ├── google-chrome-stable_current_amd64.deb
 ├── init.sh
-├── install_chrome_headless.sh
-├── requirements.txt
-├── wjsgainers.html
-└── ygainers.html
-
-1 directory, 9 files
 
 
 ## Status
