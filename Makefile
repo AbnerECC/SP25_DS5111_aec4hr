@@ -23,4 +23,4 @@ lint:
 	. env/bin/activate;  pylint bin/normalize_csv.py
 
 test: lint
-	 pytest -vv tests
+	. env/bin/activate;  pytest -vv tests
