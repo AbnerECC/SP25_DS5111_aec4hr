@@ -16,10 +16,12 @@ This repository is for applying automation techniques for data science.
 
 - Within the project run the install_chrome_headless.sh script to install a chrome headles browser and check that the example works
 - The requirements.txt file includes the pandas libraries that are needed to run the code. These requirements will be executed within the makefile
-- Within the project use the "Make" command to run the Makefile
-- The make update command includes everything thast should be needed to run the project
+- Within the project use the "Make" command to view the Makefile
+- The make update command includes everything thast should be needed to update the environment
+- Use the "make ygainers.csv" command to parse the html file into a csv
+- In case there is an error remove the .html files before attempting to rerun the make ygainer.csv as it will error on an empty file
 - An example of what the repo should look like after running this project setup is pasted below
-- SP25_DS5111_aec4hr
+SP25_DS5111_aec4hr
 ├── LICENSE
 ├── Makefile
 ├── README.md
@@ -34,6 +36,7 @@ This repository is for applying automation techniques for data science.
 │   └── pyvenv.cfg
 ├── google-chrome-stable_current_amd64.deb
 ├── init.sh
+
 
 ## Automation
 
