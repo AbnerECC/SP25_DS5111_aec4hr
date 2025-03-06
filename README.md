@@ -25,13 +25,26 @@ SP25_DS5111_aec4hr
 ├── LICENSE
 ├── Makefile
 ├── README.md
+├── bin
+│   ├── __pycache__
+│   └── normalize_csv.py
+├── env
+│   ├── bin
+│   ├── include
+│   ├── lib
+│   ├── lib64 -> lib
+│   └── pyvenv.cfg
 ├── google-chrome-stable_current_amd64.deb
 ├── init.sh
-├── install_chrome_headless.sh
-├── requirements.txt
-├── wjsgainers.html
-├── ygainers.csv
-├── ygainers.html
-└── ygainers.html~
 
-1 directory, 9 files
+
+## Automation
+
+- A linter and pytest script have been added to assist with testing for potential issues.
+- Using the make lint command in the home directory will call the linter to check the performance of the script normalize_csv script
+- Using the make test command in the home directory will call both the linter and a pytest that checks for various possible issues with the normalize_csv script
+
+
+## Status
+
+[![Feature Validation](https://github.com/AbnerECC/SP25_DS5111_aec4hr/actions/workflows/validations.yml/badge.svg?branch=LAB-03_csv_normalizer)](https://github.com/AbnerECC/SP25_DS5111_aec4hr/actions/workflows/validations.yml)
