@@ -24,7 +24,7 @@ lint:
 
 test: lint
 	. env/bin/activate;  pytest -vv tests
- 
+
 gainers:
 	@if [ -z "$(SRC)" ]; then \
     echo "Error: Must input SRC Parameter"; \
@@ -34,3 +34,7 @@ gainers:
   fi
 	@echo "Processing gainers from $(SRC)..."
 	@python3 get_gainer.py $(SRC)
+
+clean:
+    rm ygainers.* || true
+    rm wsjgainers.* || true
