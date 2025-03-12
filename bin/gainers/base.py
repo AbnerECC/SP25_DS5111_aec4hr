@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 import pandas as pd
 import sys
 
+
 # FACTORY
 class GainerFactory:
     def __init__(self, choice):
@@ -30,6 +31,7 @@ class GainerDownload(ABC):
     @abstractmethod
     def download(self):
         pass
+
 
 class GainerDownloadYahoo(GainerDownload):
     def __init__(self):
@@ -70,6 +72,7 @@ class GainerProcess(ABC):
     def save_with_timestamp(self):
         pass
 
+
 class GainerProcessYahoo(GainerProcess):
     def __init__(self, csv_path=None):
         self.csv_path = csv_path if csv_path else 'ygainers.csv' 
@@ -88,6 +91,8 @@ class GainerProcessYahoo(GainerProcess):
     
         assert output.columns.values.tolist() == list(expected_cols),\
          f'Expected column names of {expected_cols} but got {output.columns}'
+         
+        output['price'] = output['price'].str.split('+', n=1).str[0]
         
         print("Normalizing yahoo gainers")
         return output
@@ -100,6 +105,7 @@ class GainerProcessYahoo(GainerProcess):
         output.to_csv(out_path)
         ##out_path  = '~/SP25_DS5111_aec4hr/ygainers_norm.csv'
         print("Saving Yahoo gainers")
+
         
 # ITS OWN SEPARATE FILE
 class GainerProcessWSJ(GainerProcess):
@@ -118,6 +124,8 @@ class GainerProcessWSJ(GainerProcess):
     
         assert len(output.columns) == 4, f'Expected column length 4 but got {len(output.columns)}'
         
+        output['price'] = output['price'].str.split('+', n=1).str[0]
+        
         print("Normalizing WSJ gainers")
         return output
 
@@ -127,6 +135,7 @@ class GainerProcessWSJ(GainerProcess):
         out_path = f'wsjgainers_norm_{timestamp}.csv'
         output.to_csv(out_path) 
         print("Saving WSJ gainers")
+
 
 # TEMPLATE
 class ProcessGainer:

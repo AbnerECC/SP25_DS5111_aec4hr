@@ -33,4 +33,4 @@ gainers:
     exit 1; \
   fi
 	@echo "Processing gainers from $(SRC)..."
-	@python get_gainer.py $(SRC)
+	@python3 get_gainer.py $(SRC)
