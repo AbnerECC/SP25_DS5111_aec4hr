@@ -1,5 +1,7 @@
 """Factory Module for the Gainer selection"""
 #from abc import ABC, abstractmethod
+from wsj import GainerDownloadWSJ, GainerProcessWSJ
+from yahoo import GainerDownloadYahoo, GainerProcessYahoo
 
 # FACTORY
 class GainerFactory:

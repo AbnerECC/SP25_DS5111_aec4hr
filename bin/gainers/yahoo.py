@@ -1,7 +1,7 @@
 """Module for downloading and processing yahoo stock gainer data"""
 #import sys
 import pandas as pd
-
+from base import GainerDownload, GainerProcess
 
 class GainerDownloadYahoo(GainerDownload):
     """Class to download the gainer data from yahoo."""
