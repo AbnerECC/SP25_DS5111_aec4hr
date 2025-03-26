@@ -2,3 +2,4 @@ pandas
 lxml
 pylint
 pytest
+selenium
