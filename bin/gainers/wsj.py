@@ -1,6 +1,7 @@
 """Module for processing gainer data for WSJ."""
 #import sys
 import pandas as pd
+from base import GainerDownload, GainerProcess
 
 
 class GainerDownloadWSJ(GainerDownload):
@@ -26,24 +27,22 @@ class GainerProcessWSJ(GainerProcess):
         """Normalizes the wsj gainer data into the correct format."""
         assert self.csv_path.endswith('.csv'),\
         f'The file path {self.csv_path} does not end with a .csv'
-        output = pd.read_csv(self.csv_path, usecols =['Symbol', 'Price', 'Change', 'Change %'])
+        output = pd.read_csv(self.csv_path, usecols =['Unnamed: 0', 'Last', 'Chg', '% Chg'])
 
 
-        output = output.rename(columns={'Symbol':'symbol',
-                                         'Price':'price', 
-                                         'Change':'price_change', 
-                                         'Change %':'price_percent_change'})
+        output = output.rename(columns={'Unnamed: 0':'symbol',
+                                         'Last':'price', 
+                                         'Chg':'price_change', 
+                                         '% Chg':'price_percent_change'})
 
         expected_cols = ['symbol', 'price', 'price_change', 'price_percent_change']
 
         assert len(output.columns) == 4, f'Expected column length 4 but got {len(output.columns)}'
 
-        output['price'] = output['price'].str.split('+', n=1).str[0]
+        output['symbol'] = output['symbol'].str.extract(r'\((.*?)\)')
 
         assert output.columns.values.tolist() == list(expected_cols),\
          f'Expected column names of {expected_cols} but got {output.columns}'
-
-        output['price'] = output['price'].str.split('+', n=1).str[0]
 
         print("Normalizing WSJ gainers")
         return output
