@@ -11,7 +11,7 @@ def test_os_linux():
 
 def test_python_version():
     print(f'Python version: {sys.version}')
-    assert sys.version_info[:2] in [(3,10), (3,11), (3,12)], "Python version must be either 3.11 or 3.12"
+    assert sys.version_info[:2] in [(3,12), (3,13)], "Python version must be either 3.11 or 3.12"
 
 
 def test_import_csv():
