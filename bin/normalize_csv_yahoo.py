@@ -50,6 +50,7 @@ def import_csv(raw_csv_path):
     output['price_percent_change'] = output['price_percent_change'].str.strip('+%').astype(float)
     
     output['timestamp'] = dt
+    output['source'] = 'yahoo'
     
     print("Normalizing yahoo gainers")
     return output

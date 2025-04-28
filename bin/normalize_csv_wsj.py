@@ -45,6 +45,7 @@ def import_csv(raw_csv_path):
         f'Expected column names of {expected_cols} but got {output.columns}'
     
     output['timestamp'] = dt
+    output['source'] = 'wsj'
 
 
 
