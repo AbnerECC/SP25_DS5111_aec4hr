@@ -69,7 +69,7 @@ def main():
 
 
     out_path  = os.path.join(output_dir, filename)
-    wsjgainers_norm.to_csv(out_path)
+    wsjgainers_norm.to_csv(out_path, index= False)
 
 if __name__ == "__main__":
     main()
